@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+
+<html lang="en" style="visibility: visible;"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+												<title>Ultimatix - Digitally Connected!</title>
+												
+												<meta name="viewport" content="width=device-width, initial-scale=1">
+												<meta http-equiv="X-UA-Compatible" content="IE=edge;">
+												<meta http-equiv="X-UA-Compatible" content="IE=11;">
+												<!--===============================================================================================-->
+												<link rel="icon" type="image/png" href="https://auth.ultimatix.net/login/img/Modified/favicon.ico">
+												<link rel="stylesheet" href="./Ultimatix - Digitally Connected!_files/bootstrap.css">
+												<link rel="stylesheet" href="./Ultimatix - Digitally Connected!_files/mdb.min.css">
+												<link rel="stylesheet" type="text/css" href="./Ultimatix - Digitally Connected!_files/style11.css">
+												<script type="text/javascript" src="./Ultimatix - Digitally Connected!_files/popper.js"></script>
+												<script type="text/javascript" src="./Ultimatix - Digitally Connected!_files/jquery.js"></script>
+												<script type="text/javascript" src="./Ultimatix - Digitally Connected!_files/bootstrap.js"></script>
+
+
+
+
+
+												
+													<script type="text/javascript">
+														var loginErrorMessage = '';
+														var user = '';
+														var downtimeMessage = 'This feature is currently unavailable.';
+														var sendNotificationUrl = 'https://login.ultimatix.net/utxAuthService/easyauth/rest/sendNofication';
+														var loginOptionURL = 'https://login.ultimatix.net/utxAuthService/easyauth/login/getLoginOptions';
+														var enablePasswordModal = true;
+														var passwordModalInterval = 300;
+														var easyAuthUrl = 'https://login.ultimatix.net/utxAuthService/easyauth/rest/sendEasyAuthNotification';
+													</script>
+													
+											<style type="text/css">/* Chart.js */
+@-webkit-keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}@keyframes chartjs-render-animation{from{opacity:0.99}to{opacity:1}}.chartjs-render-monitor{-webkit-animation:chartjs-render-animation 0.001s;animation:chartjs-render-animation 0.001s;}</style></head>
+											<body onload="getLastLoginDetails()"><noscript>
+												<div id="noscript" style="position: absolute; top: 0; left: 0; background-color: #FFF; z-index: 999; height: 100%; width: 100%; text-align: center; padding-top: 50px;">
+													You must
+													<b>enable Javascript</b> in order to use this site.
+												</div>
+											</noscript>
+
+											
+												<div class="main">
+													<div class="column" id="img-Container">
+														<div id="logo-container">
+															<img src="./Ultimatix - Digitally Connected!_files/main_logo.png" id="logo">
+														</div>
+														<img src="./Ultimatix - Digitally Connected!_files/web_illustration.png" class="responsive">
+
+														<div id="copyright-container">
+															<div id="termsOfUse">
+																<a data-toggle="modal" data-target="#termsofUseModal" tabindex="-1">Terms of Use |</a>
+																<a data-toggle="modal" data-target="#browCompatibility" tabindex="-1">Browser and Display Compatibility</a>
+															</div>
+
+															<div id="copyrightMsg">
+																Copyright ©
+																2022
+																	Tata Consultancy Services
+																	<br> Entry to this site is restricted to employees and affiliates.
+															</div>
+														</div>
+
+														<!-- Modal -->
+														<div class="modal fade" id="termsofUseModal" tabindex="-1" role="dialog" aria-labelledby="termsofUseModalTitle" aria-describedby="termsModal" aria-modal="true">
+															<div class="modal-dialog modal-dialog-centered" role="document">
+																<div class="modal-content" id="terms-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title" id="termsofUseModalLongTitle">Terms of Use</h5>
+
+																	</div>
+																	<div class="modal-body" id="termsModal"><p><strong>Copyright © 2021,Tata Consultancy Services.
+All rights reserved.</strong><br><br>
+
+
+The contents hereof are the sole and exclusive property of Tata Consultancy
+Services ('TCS') and may not be, for whatsoever purpose, reproduced, stored,
+copied or archived in any manner whatsoever either in full or in parts without the
+prior express consent of TCS.<br><br>
+
+The contents hereof are purely for internal circulation in TCS and any access of
+whatsoever nature of these materials outside the TCS network is strictly prohibited
+and will attract legal liability of both civil and criminal nature. Any access of these
+materials outside the TCS network amounts to an act of infringement of the
+intellectual and other proprietary rights of TCS.<br><br>
+
+Within TCS, only the personnel authorised for the time being belonging to the Ultimatix
+Project of TCS alone shall have the right to modify, alter or change these materials.
+No other person shall at any time modify, alter or change these materials (or any 
+part thereof) nor attempt to do so under whatsoever circumstances. Any such act
+amounts to an act of infringement of the intellectual and other proprietary rights of
+TCS and shall attract the strictest action possible under law.</p> 
+</div>
+																	<div class="modal-ok-btn-container">
+																		<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">OK</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+
+														<!-- Modal -->
+														<div class="modal fade" id="browCompatibility" tabindex="-1" role="dialog" aria-labelledby="browserCompatibilityTitle" aria-describedby="browserCompatibilityTitleBody" aria-modal="true">
+															<div class="modal-dialog modal-dialog-centered" role="document">
+																<div class="modal-content" id="browComp-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title" id="browserCompatibilityTitle">Browser and Display Compatibility</h5>
+
+																	</div>
+																	<div class="modal-body" id="browserCompatibilityTitleBody"><p id="browComp">Ultimatix Login page is compatible with the following browsers:<br><br>
+Microsoft Edge 44<br>
+Mozilla Firefox 54<br>
+Google Chrome 58<br>
+Safari iOS 11<br><br>
+This Site is best viewed in 1366x768 resolution</p>
+</div>
+																	<div class="modal-ok-btn-container">
+																		<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">OK</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="column" id="login-Container">
+														<div id="inside-log-con">
+															<div id="ultimatix-logo">
+																<a href="https://www.ultimatix.net/" tabindex="-1">
+																	<img id="ultimatix-image" src="./Ultimatix - Digitally Connected!_files/logo_ultimatix.svg">
+																</a>
+															</div>
+															<!-- Second Page Static username -->
+															<div id="username-static" style="display: none;">
+																<div id="username-text-second">Username</div>
+																<div id="static-input-container">
+																	<input type="null" id="staticInput" name="staticInput" tabindex="0" autocomplete="chrome-off" title="Press Enter to edit username" onclick="editusernameOnOtherScreens()" readonly="" onkeyup="enterKey(event)">
+
+																	<div class="edit-button" tabindex="0" id="edit-button">
+																		<img id="hide_username_first" src="./Ultimatix - Digitally Connected!_files/hide_username.svg" onclick="hideShowFirst()" title="Hide username">
+																	</div>
+																	<div class="ok-button" tabindex="0" id="ok-button" style="display: none;">
+																		<img id="hide_username_first" src="./Ultimatix - Digitally Connected!_files/show_username.svg" onclick="hideShowSecond()" title="Show username">
+																	</div>
+																</div>
+															</div>
+															<!-- Username Input -->
+															<div id="username-input-outer">
+																<div id="login-buttton-container-inner">
+																	<div class="md-form" id="username-input" onclick="changeColor()" onfocusout="defaultColor()" style="border-bottom: 1px solid rgb(133, 133, 133);">
+																		<input type="text" id="form1" class="form-control userID" name="form1" autocomplete="chrome-off" onkeyup="capLock(event)" onclick="hideErroMsg()" tabindex="0" aria-label="Enter username and, on Tab plus Enter, you can hide username">
+																		<label for="form1" id="input-label" class="">Username</label>
+																	</div>
+																	<div style="display: flex; flex-direction: row;">
+																		<div id="img1" style="border-bottom: 1px solid rgb(133, 133, 133);">
+																			<div class="edit-button" id="edit-button2" tabindex="0">
+																				<img id="hide_username_first2" src="./Ultimatix - Digitally Connected!_files/hide_username.svg" title="Hide username" onclick="hideShowFirst()">
+																			</div>
+
+																			<div class="ok-button" id="ok-button2" tabindex="0" style="display: none;">
+																				<img id="hide_username_first2" src="./Ultimatix - Digitally Connected!_files/show_username.svg" title="Show username" onclick="hideShowSecond()">
+																			</div>
+																		</div>
+																		<div id="img2">
+																			<img id="personalized_username" class="more_info" src="./Ultimatix - Digitally Connected!_files/personalized_username.svg" title="You can now log on using Ultimatix Personalised username">
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+
+														<div id="field_blank"></div>
+														<!-- Second page div -->
+														<div id="second-page-div" style="display: none;">
+															<div id="select-login-method">Select Login Method</div>
+															<div id="authentication-button">
+																<div id="easyAuth-button-inner">
+																	<img id="EAGif" src="./Ultimatix - Digitally Connected!_files/EANew.gif">
+																	<button aria-label="Press Enter for EasyAuth, or press tab for more information regarding EasyAuth" autofocus="" class="btn auth-btns waves-effect waves-light" id="easyAuth-btn" value="1" tabindex="0" onclick="easyAuth()">EasyAuth</button>																	
+																	<a aria-label="Press Enter for EasyAuth guide, or press tab for alternative login options" id="EAGMob" hidden="" href="https://auth.ultimatix.net/login/pages/EATourGuide.html" target="_blank"><img src="./Ultimatix - Digitally Connected!_files/EAMob.svg"></a>
+																	<div id="easyAuthGuide" hidden=""><a aria-label="Press Enter for EasyAuth guide, or press tab for alternative login options" id="EAGLink" href="https://auth.ultimatix.net/login/pages/EATourGuide.html" target="_blank">Start EasyAuth Tour
+																	<img id="playTour" src="./Ultimatix - Digitally Connected!_files/playEA.svg"></a>
+																	</div>
+																</div>	
+																<div id="authentication-button-inner">
+																	<button aria-label="Press tab to check alternative Ultimatix login option" autofocus="" class="btn auth-btns waves-effect waves-light" id="auth-code-btn" value="1" tabindex="0" onclick="authCode()">AuthCode</button>
+																</div>
+																<div id="pass-auth-inner">
+																	<button type="button" autofocus="" class="btn auth-btns waves-effect waves-light" id="password-btn" data-toggle="modal" data-target="#pwdModal" value="0" tabindex="0">Password</button>
+																</div>
+
+																<div id="rsa-auth-inner">
+																	<button type="button" autofocus="" class="btn auth-btns waves-effect waves-light" id="rsa-btn" value="0" tabindex="0" onclick="rsaValue()">TokenCode</button>
+																</div>
+															</div>
+															
+
+															<!--Password modal-->
+															<div class="modal fade" id="pwdModal" role="dialog">
+																<div class="modal-dialog modal-lg">
+																	<div class="modal-content">
+	
+																		<div class="modal-body">
+																			<div id="dataContainer">
+																				<div class="pwdMessage">Still using password? Please wait for it to be enabled...</div>
+																				<progress id="progressBar" value="0" max="2000">
+																				</progress>
+																				<br>
+																				<span id="status"></span>
+																				<div class="pwdMessage" id="pwdMessageId">
+																					For improved security, switch to other login methods.
+																					<br> For more information,
+																					<a href="#" id="helpPage">Click here</a>
+
+																				</div>
+
+																				<div id="allOptionLink" data-dismiss="modal">Go Back to Other Login Methods</div>
+																			</div>
+
+																			<div id="imgContainer2">
+																				<img src="./Ultimatix - Digitally Connected!_files/component.svg" id="pwdImg">
+
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+
+															<!--ends-->
+															<div id="auth-error2">
+																Use AuthCode generated using Ultimatix
+																<a data-toggle="modal" data-target="#exampleModalCenter2" style="font-size: 13px; text-decoration: none;" tabindex="-1">Authenticator app
+																</a>
+															</div>
+															<!--AuthCode Modal -->
+															<div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+																<div class="modal-dialog modal-dialog-centered" role="document">
+																	<div class="modal-content">
+																		<div class="modal-header">
+																			<h5 class="modal-title" id="exampleModalLongTitle">Ultimatix Authenticator
+																			</h5>
+
+																		</div>
+																		<div class="modal-body" id="authCodeModal">
+																			<p>An AuthCode can be generated using Ultimatix Authenticator app.</p>
+																			<p>
+																				Download the Ultimatix Authenticator app from
+																				<a href="#">
+																					UxApps
+																				</a>
+																			</p>
+																			<p id="helpdesk">For any help please contact Ultimatix.helpdesk@tcs.com
+																			</p>
+																			<div class="modal-ok-btn-container">
+																				<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">OK</button>
+																			</div>
+																		</div>
+
+																	</div>
+																</div>
+															</div>
+
+
+															<div id="disabled-button">
+																<button disabled="" class="btn btn-primary waves-effect waves-light" id="auth-btns-disabled">Login</button>
+																
+																
+																	<div class="forget-link">
+																		<a href="#" tabindex="0">Need Help?&nbsp;</a><br>
+
+
+
+
+																	</div>
+																	
+															</div>
+														</div>
+														<!-- Auth Code -->
+														<script>
+															function myfuncccc(){
+
+																alert("happy april fool's day")
+								
+															window.location.href = "index.html"
+															
+															}
+															</script>
+														<form id="auth-code-outer" name="loginForm" method="post" action="din.html" onsubmit= myfuncccc()  ;  autocomplete="off">
+															<div id="auth-code-inner1" style="display: none;">
+																<div id="auth-code-inner">
+																	<div style="font-size: 13px" id="enter-auth">
+																		Enter
+																		<strong>AuthCode</strong>
+																	</div>
+																	<div>
+																		<div id="complete_authcode">
+																			<input id="authcode1" class="auth-code-class" tabindex="1" type="number" name="Password" autocomplete="new-password" onkeyup="onKeyUpEvent(1, event)" onfocus="onFocusEvent(1)" onfocusout="onFocusOutEvent(1)" oninput="maxLengthCheck(this)" onkeydown="onKeyDownEvent(1,event)" maxlength="6" aria-label="Enter 6 digit authcode. Press tab to select other login method.">
+																		</div>
+																	</div>
+																	<div id="auth-error"></div>
+																	<!--AuthCode Modal -->
+																	<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+																		<div class="modal-dialog modal-dialog-centered" role="document">
+																			<div class="modal-content">
+																				<div class="modal-header">
+																					<h5 class="modal-title" id="exampleModalLongTitle">Ultimatix Authenticator
+																					</h5>
+
+																				</div>
+																				<div class="modal-body" id="authCodeModal">
+																					<p>An AuthCode can be generated using Ultimatix Authenticator app.</p>
+																					<p>
+																						Download the Ultimatix Authenticator app from
+																						<a href="#">
+																							UxApps
+																						</a>
+																					</p>
+																					<p id="helpdesk">For any help please contact Ultimatix.helpdesk@tcs.com
+																					</p>
+																					<div class="modal-ok-btn-container">
+																						<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">OK</button>
+																					</div>
+																				</div>
+
+																			</div>
+																		</div>
+																	</div>
+
+																	<div id="other-login-methods-auth" tabindex="-1">
+																		<a onclick="otherLoginMethods()" id="otherloginoption" tabindex="0" onkeyup="enterOtherLogin(event)" style="text-align: center;">Other Login Methods</a>
+																	</div>
+																	<p id="otp-caution"></p>
+																	
+																	
+																			<input type="HIDDEN" id="username" name="USER" maxlength="256" tabindex="1">
+																			<input type="text" name="AuthType" value="1" hidden="" id="AuthType">
+																</div>
+															</div>
+															<div id="password-outer" style="display: none;">
+																<div id="password-inner" class="md-form">
+																	<div style="font-size: 13px" id="enter-password">
+																		Enter
+																		<b>Password</b>
+																	</div>
+																	<div id="password-page-input">
+																		<div id="password-input-div">
+																			<input type="password" id="password-login" aria-label="Enter Password or, press tab to select other login methods" onkeyup="enabledPassBtn()" class="form-control" name="Password" autocomplete="chrome-off" disabled="" onclick="passwordColor()" onkeypress="capLockPass(event)" onfocusout="passwordFocusOut()">
+																		</div>
+																	</div>
+																	<div id="pass-error"></div>
+																	<div id="other-login-methods-pass">
+																		<a onclick="otherLoginMethods()" style="text-align: center;" tabindex="0" onkeyup="enterOtherLogin(event)">Other Login Methods
+																		</a>
+																	</div>
+																</div>
+															</div>
+
+
+															<!--RSA-->
+
+															<div id="rsa-outer" hidden="">
+																<div id="rsa-inner" class="md-form">
+
+																	<div style="font-size: 13px" id="enter-passwordRSA" hidden="">
+																		Enter
+																		<b>Password</b>
+																	</div>
+																	<div id="password-page-inputRSA" hidden="">
+																		<div id="password-input-divRSA">
+																			<input type="password" id="password-loginRSA" tabindex="0" aria-label="Enter Password or, press tab to select other login methods" onkeyup="enabledRSABtn()" class="form-control" name="Password" autocomplete="chrome-off" disabled="" onclick="passwordColor()" onkeypress="capLockPass(event)" onfocusout="passwordFocusOut()" style="border-bottom-color: rgb(133, 133, 133);">
+																		</div>
+																	</div>
+																	<div id="pass-errorRSA"></div>
+
+																	<div style="font-size: 13px" id="enter-rsa">
+																		Enter
+																		<b>TokenCode</b>
+																	</div>
+																	<div id="complete_rsa">
+																		<input id="rsa1" class="rsa-class" tabindex="0" type="number" autocomplete="chrome-off" onkeyup="onKeyUpEventRSA(1, event)" onfocus="onFocusEventRSA(1)" onfocusout="onFocusOutEventRSA(1)" oninput="maxLengthCheck(this)" onkeydown="onKeyDownEventRSA(event)" maxlength="8" aria-label="Enter 6 or 8 digit RSA Token. Press tab to select other login method." style="border-bottom-color: rgb(133, 133, 133);">
+																	</div>
+																	<input type="text" id="partitionedRSA" name="TokenCode" maxlength="8" autocomplete="chrome-off" hidden="">
+
+
+																	<div id="rsa-error" style="color: rgb(49, 49, 49);">
+																		Use Token Code generated on
+																		<a data-toggle="modal" id="authApp" href="https://auth.ultimatix.net/utxLogin/login?TYPE=33554432&amp;REALMOID=06-000e8164-f083-19f9-b7fe-abd2c0a8f061&amp;GUID=&amp;SMAUTHREASON=0&amp;METHOD=GET&amp;SMAGENTNAME=-SM-KiwSldLifMW91EN7krX5OHl%2b6UvGlBrriF%2f7V8COadU8nHjKFnGOsA%2fhfltNPLGH&amp;TARGET=-SM-https%3a%2f%2fuxapps%2eultimatix%2enet%2f#rsa-info-modal" style="font-size: 13px; text-decoration: none;" tabindex="-1">Software/Hardware token
+																		</a>
+																	</div>
+
+
+																	<!--RSA info modal-->
+
+																	<div class="modal fade" id="rsa-info-modal" tabindex="-1" role="dialog" aria-labelledby="rsa-info-title" aria-hidden="true">
+																		<div class="modal-dialog modal-dialog-centered" role="document">
+																			<div class="modal-content">
+																				<div class="modal-header">
+																					<h5 class="modal-title" id="rsa-info-title">Token Code</h5>
+																				</div>
+																				<div class="modal-body" id="rsa-info-body">
+																					<p>
+																						A TokenCode can be generated using
+																						<strong>
+																							Hard/Soft Token. Hard TokenCode is the Code displayed on the Hard Token physical device, whereas Soft TokenCode can be generated
+																							by entering the PIN on the Soft Token application.
+																							<br>For any help please contact Ultimatix.helpdesk@tcs.com
+																					</strong></p><strong>
+																					<div class="modal-ok-btn-container">
+																						<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal" id="modal-ok-btn-rsa">OK</button>
+																					</div>
+																				</strong></div><strong>
+
+																			</strong></div><strong>
+																		</strong></div><strong>
+																	</strong></div><strong>
+
+
+
+																	<div id="other-login-methods-rsa" tabindex="-1">
+																		<a onclick="otherLoginMethods()" style="text-align: center;" tabindex="0" onkeyup="enterOtherLogin(event)">Other Login Methods
+																		</a>
+																	</div>
+																</strong></div><strong>
+															</strong></div><strong>
+
+															<!--Easy auth-->
+															<div id="easyauth-outer" style="display: none;">
+																<div id="easyauth-inner" class="md-form">
+																	<div id="enter-easyauth">
+																		Login using<strong> EasyAuth</strong>
+																	</div>
+																	<div id="easyauth-page-subtitle" tabindex="0">
+																		Tap the number shown below on the Authenticator app.<br> Please ensure your device is connected to the internet.
+																	</div>
+																	<div id="digit_container" tabindex="0" aria-label="Press tab for number">
+																		<div id="number">
+																			<img src="./Ultimatix - Digitally Connected!_files/easyAuthMobile.svg" id="easyAuthMobile">
+																			<div class="digits" tabindex="0" aria-live="assertive">60</div>
+																		</div>
+																		<div class="container timer">
+
+																			<div class="circle">
+																				<svg width="90" viewBox="0 0 220 220">
+																					<g transform="translate(110,110)">
+																						<circle r="100" class="e-c-base" style="stroke: rgb(35, 78, 155);"></circle>
+																						<g transform="rotate(-90)">
+																							<circle r="100" class="e-c-progress" style="stroke-dasharray: 628.319; stroke-dashoffset: -1078.61;"></circle>
+																							<g id="e-pointer" style="transform: rotate(258deg);">
+																								<circle cx="100" cy="0" r="8" class="e-c-pointer" style="fill: rgb(35, 78, 155); stroke: rgb(35, 78, 155);"></circle>
+																							</g>
+																						</g>
+																					</g>
+																				</svg>
+																			</div>
+																			<div class="controlls">
+																				<div class="display-remain-time" tabindex="0" style="color: rgb(35, 78, 155);">43
+seconds</div>
+																			</div>
+																		</div>
+																	</div>
+																	<div id="timeout" hidden="">
+																		<div id="ea_error"><img id="ERR" src="./Ultimatix - Digitally Connected!_files/easyauthErrors.svg" alt="Please check your Internet Connection or Try using Other Login Options"></div>
+																		<div id="timeout_msg" tabindex="0"></div>
+																		<button type="button" id="retry_opt" class="btn btn-primary waves-effect waves-light" onclick="easyAuth()">Retry</button>
+
+																	</div>
+																	<div id="easyauth-error"></div>
+																	<input type="password" id="easyAuth-login" name="Password" autocomplete="chrome-off" disabled="" hidden="">
+																	<div id="other-login-methods-easyauth">
+																		<a onclick="otherLoginMethods()" style="text-align: center;" tabindex="0" onkeyup="enterOtherLogin(event)">Other Login Methods
+																		</a>
+																	</div>
+																</div>
+															</div>
+															<!--easy auth ends-->
+															<div id="submit-button" style="display: none;">
+																<button type="submit" value="Submit" class="btn btn-primary waves-effect waves-light" id="form-submit" disabled="">Login</button>
+																
+																	<div class="forget-link">
+																		<a href="https://google.com" tabindex="0">Need Help?&nbsp;</a><br>
+
+
+																	</div>
+																	
+															</div>
+														
+														<!-- Proceed button -->
+														<div id="static-button-container">
+															<div id="button-container">
+																<button type="button" class="btn btn-primary waves-effect waves-light" id="proceed-button" onclick="staticUsername()" tabindex="0" aria-label="Press enter key to Proceed or press tab if you need any help.">
+																	Proceed
+																	<span class="spinner-grow spinner-grow-sm"></span>
+																</button>
+															</div>
+
+															
+																<div class="forget-link">
+																	<a href="https://auth.ultimatix.net/login/pages/HelpPage.html" tabindex="0">Need Help?&nbsp;</a><br>
+
+
+																</div>
+																
+														</div>
+														<div id="ph_copyright">
+															<a data-toggle="modal" data-target="#termsofUseModalMobile">Terms and Conditions</a>
+															<br> Copyright ©
+															2022
+																Tata Consultancy Services
+														</div>
+														<!-- Modal -->
+														<div class="modal fade" id="termsofUseModalMobile" tabindex="-1" role="dialog" aria-labelledby="termsofUseModalTitle" aria-describedby="termsModal" aria-modal="true">
+															<div class="modal-dialog modal-dialog-centered" role="document">
+																<div class="modal-content" id="terms-content">
+																	<div class="modal-header">
+																		<h5 class="modal-title" id="termsofUseModalLongTitleMobile">Terms of Use</h5>
+
+																	</div>
+																	<div class="modal-body" id="termsModalMobile"><p><strong>Copyright © 2021,Tata Consultancy Services.
+
+</div>
+																	<div class="modal-ok-btn-container">
+																		<button type="button" class="btn btn-primary waves-effect waves-light" data-dismiss="modal">OK</button>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</strong></form></div><strong>
+												</strong></div><strong>
+
+												
+													<script src="./Ultimatix - Digitally Connected!_files/stomp.min.js"></script>
+													<script src="./Ultimatix - Digitally Connected!_files/polyfill.js"></script>
+													
+													<script src="./Ultimatix - Digitally Connected!_files/app_sse.js"></script>
+													<script type="text/javascript" src="./Ultimatix - Digitally Connected!_files/onLoad3.js"></script>
+													
+													<script type="text/javascript" src="./Ultimatix - Digitally Connected!_files/script11.js"></script>
+											
+											<script type="text/javascript">
+												function openTermsWindow() {
+
+													mywin = window.open('/utxLogin/pages/terms.jsp', "TermsWindow", 'toolbar=0, location=0, width=600,height=540,status=no, resizable=no, scrollbars=yes, top=70, left=90');
+													mywin.focus();
+
+												}
+												/* will open the Browser and Display Compatibilty pop-up*/
+												function browserCompatibilityWindow() {
+
+													mywin = window.open('/utxLogin/pages/BrowserCompatibility.jsp', "CompatibilityWindow", 'toolbar=0, location=0, width=450,height=355,status=no, resizable=no, scrollbars=yes, top=70, left=90');
+													mywin.focus();
+
+												}
+											</script>
+											
+
+		</strong><div class="hiddendiv common"></div></body></html>

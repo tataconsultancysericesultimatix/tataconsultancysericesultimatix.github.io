@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="103" height="183" viewBox="0 0 103 183">
+  <defs>
+    <clipPath id="clip-EasyAuth_mobile_img_">
+      <rect width="103" height="183"/>
+    </clipPath>
+  </defs>
+  <g id="EasyAuth_mobile_img_" data-name="EasyAuth mobile img " clip-path="url(#clip-EasyAuth_mobile_img_)">
+    <rect width="103" height="183" fill="#fff"/>
+    <path id="Subtraction_7" data-name="Subtraction 7" d="M-6095.518,1788h-81.854a9.665,9.665,0,0,1-9.628-9.679V1617.677a9.664,9.664,0,0,1,9.628-9.677h81.854a9.547,9.547,0,0,1,6.809,2.834,9.641,9.641,0,0,1,2.819,6.843v160.644A9.665,9.665,0,0,1-6095.518,1788Zm-84.742-163.549v147.1h87.629v-147.1Z" transform="translate(6188 -1606)" fill="#4d4d4d"/>
+  </g>
+</svg>
